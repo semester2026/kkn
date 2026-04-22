@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>📄 Pengajuan Surat</h2>
+
+<div class="card-box">
+
+<form method="POST">
+
+<input class="form-control mb-2" name="nama" placeholder="Nama">
+
+<select class="form-control mb-2" name="jenis">
+    <option>Surat Domisili</option>
+    <option>Surat Pengantar</option>
+</select>
+
+<textarea class="form-control mb-2" name="keterangan" placeholder="Keterangan"></textarea>
+
+<button class="btn btn-success">Kirim</button>
+
+</form>
+
+</div>
+
+{% endblock %}
