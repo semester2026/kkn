@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>📢 Pengumuman RT</h2>
+
+<div class="card-box mb-3">
+
+<form method="POST" action="/tambah_pengumuman">
+    <input class="form-control mb-2" name="judul" placeholder="Judul">
+    <textarea class="form-control mb-2" name="isi" placeholder="Isi"></textarea>
+    <button class="btn btn-dark">Tambah</button>
+</form>
+
+</div>
+
+{% for p in data %}
+<div class="card-box mb-3">
+    <h5>{{ p.judul }}</h5>
+    <p>{{ p.isi }}</p>
+</div>
+{% endfor %}
+
+{% endblock %}
