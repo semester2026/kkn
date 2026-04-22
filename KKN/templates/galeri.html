@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>🖼 Galeri Kegiatan</h2>
+
+<div class="row">
+
+{% for g in data %}
+<div class="col-md-4 mb-3">
+    <div class="card-box">
+        <img src="/static/uploads/{{ g.gambar }}" class="img-fluid rounded">
+        <p>{{ g.keterangan }}</p>
+    </div>
+</div>
+{% endfor %}
+
+</div>
+
+{% endblock %}
